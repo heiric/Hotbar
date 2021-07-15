@@ -1,0 +1,7 @@
+name: Hotbar
+main: Hotbar\Main
+version: 1.0.0
+api: 3.0.0
+
+author: Eric
+description: Hotbar Plugin for PMMP
