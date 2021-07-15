@@ -10,6 +10,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerDropItemEvent;
 use pocketmine\event\player\PlayerInteractEvent;
+use pocketmine\event\player\PlayerBlockPickEvent;
 use pocketmine\event\player\PlayerItemConsumeEvent;
 use pocketmine\event\inventory\InventoryTransactionEvent;
 
@@ -27,6 +28,10 @@ class onListener implements Listener {
 
     public function onTransact(InventoryTransactionEvent $event) {
         $event->setCancelled(true);
+    }
+
+    public function onPick(PlayerBlockPickEvent $event) {
+        $event->setCancelled();
     }
 
     public function onConsume(PlayerItemConsumeEvent $event) {
